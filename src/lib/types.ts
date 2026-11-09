@@ -107,7 +107,30 @@ export type OrderItem = {
   total_price: number;
 };
 
-
+export type Order = {
+  id: string;
+  order_number: string;
+  public_token: string;
+  customer_id: string | null;
+  customer_account_id?: string | null;
+  customer_name: string;
+  phone: string;
+  email: string | null;
+  address: string;
+  locality: string;
+  pin_code: string;
+  notes: string | null;
+  fulfilment_method: FulfilmentMethod;
+  payment_method: PaymentMethod;
+  payment_status: string;
+  order_status: OrderStatus;
+  subtotal: number;
+  delivery_charge: number;
+  discount: number;
+  total: number;
+  created_at: string;
+  items: OrderItem[];
+};
 
 export type Customer = {
   id: string;

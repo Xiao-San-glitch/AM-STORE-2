@@ -2,7 +2,7 @@ import type { Db } from "../contract";
 import type { CustomerAccount, SavedAddress } from "../../types";
 import * as catalog from "./catalog";
 import * as orders from "./orders";
-import { getDb, verifyPassword, hashPassword } from "./client";
+import { getDb, verifyPassword } from "./client";
 import { randomUUID } from "node:crypto";
 
 type AdminRow = { email: string; password_hash: string; role: string };
@@ -73,7 +73,7 @@ export const local: Db = {
   listSavedAddresses: async (customerId) => {
     return getDb()
       .prepare("SELECT * FROM saved_addresses WHERE customer_account_id = ? ORDER BY is_default DESC, created_at ASC")
-      .all(customerId) as SavedAddress[];
+      .all(customerId) as unknown as SavedAddress[];
   },
 
   createSavedAddress: async (input) => {

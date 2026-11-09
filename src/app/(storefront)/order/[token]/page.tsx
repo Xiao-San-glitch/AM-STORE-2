@@ -70,7 +70,7 @@ export default async function OrderPage({ params, searchParams }: Props) {
             orderStatusTone(order.order_status),
           )}
         >
-          {ORDER_STATUS_LABELS[order.order_status]}
+          {ORDER_STATUS_LABELS[order.order_status as OrderStatus]}
         </span>
       </div>
 
