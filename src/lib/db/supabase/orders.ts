@@ -42,12 +42,36 @@ export async function createOrder(input: CreateOrderInput): Promise<Order> {
 
   if (error) throw new Error(error.message);
 
-  const result = data as { order_id?: string; error?: string } | null;
+  const result = data as { order_id?: string; order_number?: string; public_token?: string; error?: string } | null;
   if (!result?.order_id) throw new Error(result?.error || "Order could not be placed.");
 
-  const order = await getOrderById(result.order_id);
-  if (!order) throw new Error("Order was saved but could not be loaded.");
-  return order;
+  // Return a minimal Order from the RPC response.
+  // The API route only needs public_token and order_number.
+  // We cannot re-fetch via getOrderById here because the anon key
+  // doesn't have SELECT access on orders (admin-only RLS).
+  return {
+    id: result.order_id,
+    order_number: result.order_number ?? "",
+    public_token: result.public_token ?? "",
+    customer_id: null,
+    customer_name: input.customer_name,
+    phone: input.phone,
+    email: input.email ?? null,
+    address: input.address,
+    locality: input.locality,
+    pin_code: input.pin_code,
+    notes: input.notes ?? null,
+    fulfilment_method: input.fulfilment_method as any,
+    payment_method: input.payment_method as any,
+    payment_status: "unpaid",
+    order_status: "pending" as any,
+    subtotal: 0,
+    delivery_charge: 0,
+    discount: 0,
+    total: 0,
+    created_at: new Date().toISOString(),
+    items: [],
+  };
 }
 
 export async function getOrderById(id: string): Promise<Order | null> {
