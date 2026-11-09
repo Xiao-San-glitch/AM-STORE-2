@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D5E0D6"/>
+      <stop offset="55%" stop-color="#D5E0D6"/>
+      <stop offset="100%" stop-color="#93AE9A"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E7CD7C"/>
+      <stop offset="50%" stop-color="#4F6B55"/>
+      <stop offset="100%" stop-color="#A9821F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="#EDF1EC"/>
+  <rect width="800" height="600" fill="url(#halo)"/>
+  <circle cx="400" cy="300" r="196" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="400" cy="300" r="196" fill="none" stroke="#4F6B55" stroke-opacity="0.3"/>
+  <g transform="translate(-30 20) scale(0.44)"><g>
+    <ellipse cx="450" cy="786" rx="176" ry="24" fill="#111111" opacity="0.07"/>
+    <path d="M330 286l120-58 120 58v314l-120 64-120-64z" fill="url(#body)"/>
+    <path d="M330 286l120 58 120-58" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+    <path d="M450 344v320" stroke="#111111" stroke-opacity="0.08" stroke-width="3"/>
+    <rect x="330" y="430" width="240" height="34" fill="url(#band)"/><g>
+    <circle cx="450" cy="540" r="58" fill="#111111"/>
+    <circle cx="450" cy="540" r="52" fill="none" stroke="#4F6B55" stroke-width="1.2" stroke-opacity="0.85"/>
+    <text x="450" y="550" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="1" fill="#4F6B55">AM</text>
+    <text x="450" y="614" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="4" fill="#FFFFFF" opacity="0.92">HOUSEHOLD</text>
+  </g></g></g>
+  <g transform="translate(150 -40) scale(0.56)"><g>
+    <ellipse cx="450" cy="786" rx="176" ry="24" fill="#111111" opacity="0.07"/>
+    <path d="M330 286l120-58 120 58v314l-120 64-120-64z" fill="url(#body)"/>
+    <path d="M330 286l120 58 120-58" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="3"/>
+    <path d="M450 344v320" stroke="#111111" stroke-opacity="0.08" stroke-width="3"/>
+    <rect x="330" y="430" width="240" height="34" fill="url(#band)"/><g>
+    <circle cx="450" cy="540" r="58" fill="#111111"/>
+    <circle cx="450" cy="540" r="52" fill="none" stroke="#4F6B55" stroke-width="1.2" stroke-opacity="0.85"/>
+    <text x="450" y="550" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="1" fill="#4F6B55">AM</text>
+    <text x="450" y="614" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="4" fill="#FFFFFF" opacity="0.92">HOUSEHOLD</text>
+  </g></g></g>
+</svg>

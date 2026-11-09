@@ -1,0 +1,15 @@
+node_modules
+.next
+.data
+.cache
+public/uploads
+.git
+.gitignore
+.env
+.env*.local
+.env.production
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+README.md
+PHOTO-CREDITS.md

@@ -1,0 +1,24 @@
+name: am-store
+
+services:
+  store:
+    build: .
+    image: am-store:latest
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      LOCAL_DB_PATH: /app/.data/am-store.db
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      # SQLite database, product photos uploaded in the admin panel, and the
+      # order records they belong to. These must survive redeploys.
+      - am-store-data:/app/.data
+      - am-store-uploads:/app/public/uploads
+
+volumes:
+  am-store-data:
+  am-store-uploads:

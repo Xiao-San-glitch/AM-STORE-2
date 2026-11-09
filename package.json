@@ -1,0 +1,36 @@
+{
+  "name": "am-store",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AM STORE - premium grocery e-commerce storefront for Longleng, Nagaland",
+  "scripts": {
+    "dev": "NODE_OPTIONS='--no-warnings' next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "images": "node scripts/generate-product-images.mjs",
+    "photos": "node scripts/fetch-product-photos.mjs",
+    "photos:apply": "node scripts/apply-product-photos.mjs && node scripts/write-photo-credits.mjs",
+    "seed": "node --experimental-strip-types scripts/seed.ts",
+    "create-admin": "node --experimental-strip-types scripts/create-admin.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.454.0",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2"
+  }
+}

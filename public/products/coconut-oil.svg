@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4DE9E"/>
+      <stop offset="55%" stop-color="#F4DE9E"/>
+      <stop offset="100%" stop-color="#D3AE4A"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E7CD7C"/>
+      <stop offset="50%" stop-color="#A8801F"/>
+      <stop offset="100%" stop-color="#A9821F"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="900" fill="#FBF3DF"/>
+  <rect width="900" height="900" fill="url(#halo)"/>
+  <circle cx="450" cy="470" r="300" fill="none" stroke="#A8801F" stroke-opacity="0.18"/>
+  <circle cx="450" cy="470" r="272" fill="none" stroke="#A8801F" stroke-opacity="0.1"/>
+  <g>
+    <ellipse cx="450" cy="780" rx="150" ry="22" fill="#111111" opacity="0.07"/>
+    <rect x="336" y="232" width="228" height="58" rx="18" fill="url(#band)"/>
+    <rect x="352" y="290" width="196" height="16" fill="#D3AE4A" opacity="0.5"/>
+    <rect x="330" y="306" width="240" height="286" rx="38" fill="url(#body)"/>
+    <rect x="330" y="306" width="240" height="286" rx="38" fill="none" stroke="#111111" stroke-opacity="0.07"/>
+    <rect x="330" y="470" width="240" height="122" fill="#FFFFFF" opacity="0.62"/><g>
+    <circle cx="450" cy="540" r="58" fill="#111111"/>
+    <circle cx="450" cy="540" r="52" fill="none" stroke="#A8801F" stroke-width="1.2" stroke-opacity="0.85"/>
+    <text x="450" y="550" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" letter-spacing="1" fill="#A8801F">AM</text>
+    <text x="450" y="614" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="4" fill="#FFFFFF" opacity="0.92">COOKING OIL</text>
+  </g></g>
+</svg>
